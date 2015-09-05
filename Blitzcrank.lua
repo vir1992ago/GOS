@@ -1,3 +1,5 @@
+--Ainda falta acabar a build do blitz.............. 
+
 PrintChat("Blitzcrank(Deftsu) Plugin for CloudBot by medivih")
 PrintChat("Credits: Deftsu, Ilovesona, Noddy and Cloud")
 --
@@ -47,7 +49,7 @@ AutoBuy()
                         CastSpell(_R)
 	                end
 	                      
-	end	
+	--end	
 	
 	
 end)
@@ -114,13 +116,7 @@ function AutoBuy()
     end
     --end
     
-    --Wards--
-    --Stealth Ward (2044) green
-    --Vision Ward (2043) pink
 
-
-    --Sightstone (2049)
-    --Sweeping Lens (Trinket) 	3341 
 
 
 Ticker = GetTickCount()
@@ -129,10 +125,16 @@ if (global_ticks + 5000) < Ticker then
         if GetItemSlot(myHero,2003) == 0 or GetItemSlot(myHero,2003) < 2 and GetLevel(myHero) > 1  then 
         BuyItem(2003)
         end
+     --Wards--
+    --Vision Ward (2043) pink
+        if GetItemSlot(myHero,2043) == 0 and GetLevel(myHero) > 1  then 
+        BuyItem(2043)
+        end
 
     --Tear of the Goddess   3070
-        if GetItemSlot(myHero,3070) == 0 and GetItemSlot(myHero,3003) == 0 and GetItemSlot(myHero,3040) == 0 then 
-        BuyItem(3070)
+    --Sightstone (2049)
+        if GetItemSlot(myHero,2049) == 0 and GetItemSlot(myHero,3003) == 0 and GetItemSlot(myHero,3040) == 0 then 
+        BuyItem(2049)
         --Boots of Speed (1001)
         elseif GetItemSlot(myHero,1001) == 0 and GetItemSlot(myHero,3020) == 0 then 
         BuyItem(1001)
