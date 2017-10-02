@@ -1,5 +1,5 @@
-PrintChat("Karthus(Ilovesona) Plugin for CloudBot by medivih")
-PrintChat("Credits: Ilovesona, Noddy and Cloud")
+PrintChat("Tristana(RelaxKid) Plugin for CloudBot by medivih")
+PrintChat("Credits: RelaxKid, Noddy and Cloud")
 global_ticks = 0
 
 OnLoop(function(myHero)
